@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "postbuild": "shx test -e dist/*.js && shx chmod +x dist/*.js || true",
+    "postbuild": "shx test -e dist/*.js && shx chmod +x dist/*.js || true && shx cp src/facts.json dist/",
     "prepare": "npm run build",
     "watch": "tsc --watch",
     "start": "node dist/index.js"
